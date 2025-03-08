@@ -2,7 +2,7 @@ const bcrypt = require('bcryptjs');
 const validator = require('validator');
 const userModel = require('../Model/userModel');
 const jwt = require('jsonwebtoken');
-const { setCookiesWithToken } = require('../Utils/VerifyToken');
+const { setCookiesWithToken } = require('../Utils/token');
 
 
 const signUp = async(req, res) => {

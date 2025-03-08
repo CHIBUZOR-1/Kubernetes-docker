@@ -15,5 +15,6 @@ spec:
       containers:
       - name: backend
         image: chibuzor1/dapp3:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 5500

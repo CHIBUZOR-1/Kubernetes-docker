@@ -2,7 +2,8 @@ const express = require('express');
 const userRouter = express.Router();
 const multer = require('multer');
 const { signIn, signUp, signOut, forgotPassword, newPassPhrase, updateProfilePhoto, updateProfile } = require('../Controller/auth');
-const { verifyToken } = require('../Utils/VerifyToken');
+const { verifyToken } = require('../Utils/token');
+
 
 const cloudinary = require('cloudinary').v2; 
 
