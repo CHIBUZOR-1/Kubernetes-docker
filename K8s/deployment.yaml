@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mern-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mern-app
+  template:
+    metadata:
+      labels:
+        app: mern-app
+    spec:
+      containers:
+      - name: backend
+        image: chibuzor1/dapp3:latest
+        ports:
+        - containerPort: 5500

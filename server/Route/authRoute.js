@@ -3,6 +3,7 @@ const userRouter = express.Router();
 const multer = require('multer');
 const { signIn, signUp, signOut, forgotPassword, newPassPhrase, updateProfilePhoto, updateProfile } = require('../Controller/auth');
 const { verifyToken } = require('../Utils/VerifyToken');
+
 const cloudinary = require('cloudinary').v2; 
 
 const storage = multer.memoryStorage();
