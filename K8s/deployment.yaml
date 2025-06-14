@@ -18,3 +18,19 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 5500
+        env:   # Add this section for environment variables
+        - name: HOSTPORT
+          valueFrom:
+            configMapKeyRef:
+              name: mern-config   # Refers to your ConfigMap
+              key: HOSTPORT 
+        - name: MONGOOSE_URL
+          valueFrom:
+            secretKeyRef:
+              name: mern-secrets
+              key: MONGOOSE_URL
+        - name: JWT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: mern-secrets
+              key: JWT_SECRET
